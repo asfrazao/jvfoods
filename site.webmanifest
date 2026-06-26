@@ -1,0 +1,20 @@
+{
+  "short_name": "J&V Food",
+  "name": "J&V Food",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#080604",
+  "theme_color": "#080604",
+  "display": "standalone"
+}
