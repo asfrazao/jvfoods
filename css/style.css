@@ -105,30 +105,54 @@ button {
   align-items: center;
   gap: 12px;
   min-width: max-content;
+  flex-wrap: nowrap;
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
   width: 54px;
   height: 54px;
+  min-width: 54px;
   border: 1px solid rgba(232, 120, 47, 0.55);
   background: linear-gradient(135deg, #2b0f08, #bd3b22 52%, #e17a32);
   border-radius: 50%;
-  color: #fff;
-  font-family: "Bebas Neue", Impact, sans-serif;
-  font-size: 1.55rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  white-space: nowrap;
+  line-height: 1;
+  color: #fff7ee;
+  box-shadow: 0 10px 26px rgba(194, 58, 36, 0.28);
+}
+
+.brand-mark span {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  text-align: center;
 }
 
 .brand-copy {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   line-height: 1.05;
+  min-width: 0;
 }
 
-.brand-copy strong {
+.brand-title {
   font-family: "Bebas Neue", Impact, sans-serif;
   font-size: 1.9rem;
   font-weight: 400;
+  white-space: nowrap;
+  letter-spacing: 0;
 }
 
 .brand-amp {
@@ -137,17 +161,12 @@ button {
   letter-spacing: 0;
 }
 
-.brand-amp--mark {
-  display: inline-block;
-  transform: translateY(-0.02em);
-  font-size: 0.92em;
-}
-
-.brand-copy small {
+.brand-subtitle {
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .main-nav {
@@ -309,6 +328,7 @@ button {
 .hero h1 {
   max-width: 760px;
   font-size: clamp(3.3rem, 8vw, 7rem);
+  white-space: normal;
 }
 
 .hero .brand-amp {
@@ -714,8 +734,11 @@ button {
   100% {
     box-shadow: 0 14px 34px rgba(37, 211, 102, 0.34);
   }
+
   50% {
-    box-shadow: 0 14px 34px rgba(37, 211, 102, 0.34), 0 0 0 12px rgba(37, 211, 102, 0.1);
+    box-shadow:
+      0 14px 34px rgba(37, 211, 102, 0.34),
+      0 0 0 12px rgba(37, 211, 102, 0.1);
   }
 }
 
@@ -805,17 +828,26 @@ button {
     min-height: calc(100vh - 74px);
   }
 
+  .brand {
+    gap: 10px;
+  }
+
   .brand-mark {
     width: 46px;
     height: 46px;
-    font-size: 1.35rem;
+    min-width: 46px;
   }
 
-  .brand-copy strong {
+  .brand-mark span {
+    font-size: 0.86rem;
+    letter-spacing: -0.7px;
+  }
+
+  .brand-title {
     font-size: 1.55rem;
   }
 
-  .brand-copy small {
+  .brand-subtitle {
     font-size: 0.65rem;
   }
 
