@@ -698,10 +698,21 @@ button {
   gap: 18px;
 }
 
+.footer-copy {
+  display: grid;
+  gap: 6px;
+  text-align: right;
+}
+
 .footer-inner p {
   margin: 0;
   color: var(--muted-2);
   font-size: 0.9rem;
+}
+
+.footer-copy a {
+  color: var(--text);
+  font-weight: 800;
 }
 
 .whatsapp-float {
@@ -900,6 +911,10 @@ button {
 
   .footer-inner {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-copy {
     text-align: center;
   }
 
