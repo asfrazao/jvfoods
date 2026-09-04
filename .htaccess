@@ -1,0 +1,11 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www\.jvfoods\.com\.br$ [NC]
+RewriteRule ^ https://jvfoods.com.br%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "index, follow"
+</IfModule>
